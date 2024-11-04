@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:todo/Util/splash_screen/splash.dart';
 import 'package:todo/pges/Hom_Page/home_page.dart';
 
 void main() async {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const Splash_Screen(),
       theme: ThemeData(
           primarySwatch: Colors.teal,
           colorScheme: ColorScheme(
