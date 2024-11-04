@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
         onPressed: creatNewTask,
         child: Icon(
           Icons.add,
-          color: Theme.of(context).colorScheme.onSurface,
+          color: Colors.black,
         ),
       ),
     );
