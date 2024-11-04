@@ -10,7 +10,7 @@ ThemeData dark_Theme = ThemeData(
       onSecondary: Colors.white30,
       error: Colors.red,
       onError: Colors.green,
-      surface: Colors.black54,
+      surface: Colors.black87,
       onSurface: Colors.white),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
     backgroundColor: Colors.black,
