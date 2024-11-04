@@ -57,11 +57,7 @@ class _HomePageState extends State<HomePage> {
       _controller.clear();
     });
     db.updataDta();
-    try {
-      _scrollToLastItem();
-    } catch (error) {
-      print('error isssssssssssssss ${error.toString()}');
-    }
+    _scrollToLastItem();
   }
 
   // create a new task
@@ -86,15 +82,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal[200],
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
-        backgroundColor: Colors.teal,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         title: const Text('TO DO'),
         elevation: 0,
       ),
       body: ConditionalBuilder(
           condition: db.toDoList.isEmpty,
-          builder: (context) => Center(
+          builder: (context) => const Center(
                 child: Text(
                   'Create your first task',
                   style: TextStyle(
@@ -114,9 +110,9 @@ class _HomePageState extends State<HomePage> {
               )),
       floatingActionButton: FloatingActionButton(
         onPressed: creatNewTask,
-        child: const Icon(
+        child: Icon(
           Icons.add,
-          color: Colors.black,
+          color: Theme.of(context).colorScheme.onSurface,
         ),
       ),
     );
