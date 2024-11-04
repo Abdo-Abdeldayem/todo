@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:todo/Util/splash_screen/splash.dart';
-import 'package:todo/pges/Hom_Page/home_page.dart';
+import 'package:todo/Util/themes/dark_theme.dart';
+import 'package:todo/Util/themes/light_theme.dart';
 
 void main() async {
   // init the hive
@@ -22,21 +23,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const Splash_Screen(),
-      theme: ThemeData(
-          primarySwatch: Colors.teal,
-          colorScheme: ColorScheme(
-              brightness: Brightness.light,
-              primary: Colors.teal,
-              onPrimary: Colors.white,
-              secondary: Colors.teal[200]!,
-              onSecondary: Colors.black,
-              error: Colors.red,
-              onError: Colors.green,
-              surface: Colors.teal,
-              onSurface: Colors.black),
-          floatingActionButtonTheme: const FloatingActionButtonThemeData(
-            backgroundColor: Colors.teal,
-          )),
+      theme: light_Theme,
+      darkTheme: dark_Theme,
     );
   }
 }
